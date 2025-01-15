@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "express": "*",
+    "morgan": "*",
+    "@octokit/webhooks": "*",
+    "ini": "*"
+  }
+}
