@@ -10,7 +10,7 @@ const exec = promisify(execute)
 const {
   GIT_URL,
   WEBHOOK_SECRET,
-  PORT = 7680,
+  PORT = 7860,
 } = process.env
 
 const CONFIG_FILE = 'hf.conf' //TODO: mv to env
