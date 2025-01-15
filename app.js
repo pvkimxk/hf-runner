@@ -163,8 +163,8 @@ async function startApplication(build = false) {
 
 webhooks.onAny((event) => {
   logWebhook('info', `Received event: ${event.name} with ID: ${event.id}`)
-  if (childProcess) {
-    childProcess.send(event)
+  if (childProcess && event.name === 'push') {
+    childProcess.send('push='+JSON.stringify(events))
     childProcess.emit('message', 'build')
   }
 })
